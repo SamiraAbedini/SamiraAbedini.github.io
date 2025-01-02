@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.cdc60329.css",
-    "main.js": "/static/js/main.74bd6f78.js",
+    "main.css": "/static/css/main.6f2fe60d.css",
+    "main.js": "/static/js/main.0f6bad8d.js",
     "static/css/64.bba8fa55.chunk.css": "/static/css/64.bba8fa55.chunk.css",
     "static/js/64.478e8e1b.chunk.js": "/static/js/64.478e8e1b.chunk.js",
     "static/css/769.b3cbb36b.chunk.css": "/static/css/769.b3cbb36b.chunk.css",
@@ -10,17 +10,14 @@
     "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
     "static/media/resume.pdf": "/static/media/resume.ed3aa2fcc3b80dee890b.pdf",
     "static/media/hallaj.png": "/static/media/hallaj.51d6669ceeefa5f216bc.png",
-    "static/media/UniversityofGeneva.png": "/static/media/UniversityofGeneva.2de6c5d2143452bbfaac.png",
     "static/media/logoudss.png": "/static/media/logoudss.94cdc2ffa35cce5a8034.png",
     "static/media/Agustina.woff": "/static/media/Agustina.eb0c59dda4cc308cba96.woff",
-    "static/media/JohnsHopkinsUniversity.png": "/static/media/JohnsHopkinsUniversity.a8d4cd6c6a40f4032a76.png",
     "static/media/pngegg.png": "/static/media/pngegg.40d2642a667a42b93cc9.png",
     "static/media/cog.png": "/static/media/cog.06f6639cc4f1c4447188.png",
     "static/media/manOnTable.svg": "/static/media/manOnTable.8f117eb207e57ed8f89d67d595aceb45.svg",
     "static/media/bmg.png": "/static/media/bmg.53fe65dcdef3b110bad1.png",
     "static/media/contactMailDark.svg": "/static/media/contactMailDark.1db650d351729a0f17b4e3104e6a7b7a.svg",
     "static/media/developerActivity.svg": "/static/media/developerActivity.2c0445cae86f4243433a2f5a22b2c031.svg",
-    "static/media/deep.webp": "/static/media/deep.08a8f9c9a754cce24d7a.webp",
     "static/media/utech.webp": "/static/media/utech.f711c7875038e6d28922.webp",
     "static/media/datacamp.png": "/static/media/datacamp.6de4114110fd77c0bf7a.png",
     "static/media/skill.svg": "/static/media/skill.35a147662ab0a1d15e579690446e0258.svg",
@@ -28,15 +25,15 @@
     "static/media/nextuLogo.webp": "/static/media/nextuLogo.e033dbfa4c58c0a906aa.webp",
     "index.html": "/index.html",
     "static/media/talksCardBack.svg": "/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
-    "main.cdc60329.css.map": "/static/css/main.cdc60329.css.map",
-    "main.74bd6f78.js.map": "/static/js/main.74bd6f78.js.map",
+    "main.6f2fe60d.css.map": "/static/css/main.6f2fe60d.css.map",
+    "main.0f6bad8d.js.map": "/static/js/main.0f6bad8d.js.map",
     "64.bba8fa55.chunk.css.map": "/static/css/64.bba8fa55.chunk.css.map",
     "64.478e8e1b.chunk.js.map": "/static/js/64.478e8e1b.chunk.js.map",
     "769.b3cbb36b.chunk.css.map": "/static/css/769.b3cbb36b.chunk.css.map",
     "769.7612a759.chunk.js.map": "/static/js/769.7612a759.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cdc60329.css",
-    "static/js/main.74bd6f78.js"
+    "static/css/main.6f2fe60d.css",
+    "static/js/main.0f6bad8d.js"
   ]
 }
