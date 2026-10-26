@@ -151,7 +151,7 @@
   <div>
     <h1>Samira <span class="nowrap">Abedini<span class="bee" aria-hidden="true"><img src="assets/bee.png" alt="" width="111" height="124" /></span></span></h1>
     <div class="role"><span>Research Assistant, CISPA Helmholtz Center for Information Security</span><span>MSc Computer Science student, Saarland University</span></div>
-    <p>I am a Master's student in Computer Science at Saarland University and a research assistant in the Dormant Neurons group at CISPA. My research focuses on the safety and security of LLM agents. I'm particularly interested in how agents influence each other and how understanding these interactions and their cascading effects can help us build safer and more robust multi-agent systems. Recently, I've also been exploring self-improving multi-agent systems and their safety implications : )</p>
+    <p>I am a Master's student in Computer Science at Saarland University and a research assistant in the <a href="https://dormantneurons.science">Dormant Neurons</a> group at <a href="https://cispa.de/en">CISPA</a>. My research focuses on the safety and security of LLM agents. I'm particularly interested in how agents influence each other and how understanding these interactions and their cascading effects can help us build safer and more robust multi-agent systems. Recently, I've also been exploring self-improving multi-agent systems and their safety implications : )</p>
     <div class="icon-links">
       <a href="mailto:samira.abedini@cispa.de" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg></a>
       <a href="https://scholar.google.com/citations?user=r9zUsXIAAAAJ&amp;hl=en" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a>
@@ -306,7 +306,7 @@
   if (!canFollow) { cb.remove(); bubble.remove(); toggle.remove(); return; }
 
   const W = 34, H = 38;
-  const GLIDE_MS = 1800;
+  const GLIDE_MS = 2600;
   let mode = 'home';
   let glideFrom = null, glideStart = 0;
   let tx = 0, ty = 0, x = 0, y = 0, s = 1, lastX = null, lastY = 0, seen = false;
@@ -333,7 +333,7 @@
     bubbleOnBee = true;
     placeBubble();
     bubble.classList.add('show');
-    bubbleTimer = setTimeout(() => { bubble.classList.remove('show'); bubbleOnBee = false; }, 2400);
+    bubbleTimer = setTimeout(() => { bubble.classList.remove('show'); bubbleOnBee = false; }, 4000);
   }
   function placeBubble() {
     bubble.style.transform = 'translate(' + x + 'px,' + (y - H * s / 2 - 10) + 'px) translate(-50%, -100%)';
