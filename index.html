@@ -301,7 +301,7 @@
   const toggle = document.querySelector('.bee-toggle');
   const toggleText = toggle.querySelector('span');
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const canFollow = !reduceMotion && matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const canFollow = matchMedia('(any-hover: hover) and (any-pointer: fine)').matches;
 
   if (!canFollow) { cb.remove(); bubble.remove(); toggle.remove(); return; }
 
@@ -415,7 +415,7 @@
     if (mode === 'returning' && t > 0.85) face = 1;
     const tilt = Math.max(-20, Math.min(20, vy * 2.5));
     if (mode === 'follow') { vx *= 0.85; vy *= 0.85; }
-    const bob = mode === 'returning' ? 0 : Math.sin(now / 180) * 2;
+    const bob = mode === 'returning' || reduceMotion ? 0 : Math.sin(now / 180) * 2;
     cb.style.transform = 'translate(' + (x - W / 2) + 'px,' + (y - H / 2 + bob) + 'px) scale(' + (s * face) + ',' + s + ') rotate(' + (tilt * face) + 'deg)';
     if (bubbleOnBee) placeBubble();
     if (cb.classList.contains('on')) requestAnimationFrame(tick); else running = false;
@@ -441,7 +441,6 @@
   const statusEl = document.getElementById('status');
   const defenseBtn = document.getElementById('defense');
   const resetBtn = document.getElementById('reset');
-  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   let seed = 11;
   function rand() {
@@ -576,16 +575,14 @@
     last = now;
     acc += dt * STEPS_PER_SEC;
     while (acc >= 1) { step(); acc -= 1; }
-    if (!reduceMotion) {
-      msgClock += dt;
-      while (msgClock > 0.07) { spawnMsg(); msgClock -= 0.07; }
-      for (let k = msgs.length - 1; k >= 0; k--) {
-        const m = msgs[k];
-        m.t += dt / 0.9;
-        if (m.t >= 1) { m.dot.remove(); msgs.splice(k, 1); continue; }
-        m.dot.setAttribute('cx', pts[m.from].x + (pts[m.to].x - pts[m.from].x) * m.t);
-        m.dot.setAttribute('cy', pts[m.from].y + (pts[m.to].y - pts[m.from].y) * m.t);
-      }
+    msgClock += dt;
+    while (msgClock > 0.07) { spawnMsg(); msgClock -= 0.07; }
+    for (let k = msgs.length - 1; k >= 0; k--) {
+      const m = msgs[k];
+      m.t += dt / 0.9;
+      if (m.t >= 1) { m.dot.remove(); msgs.splice(k, 1); continue; }
+      m.dot.setAttribute('cx', pts[m.from].x + (pts[m.to].x - pts[m.from].x) * m.t);
+      m.dot.setAttribute('cy', pts[m.from].y + (pts[m.to].y - pts[m.from].y) * m.t);
     }
     render();
     requestAnimationFrame(frame);
