@@ -1,1 +1,612 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>SamiraAbedini</title><meta name="title" content="SamiraAbedini"><meta name="description" content="SamiraAbedini"><meta property="og:type" content="website"><meta property="og:url" content="https://developerfolio.js.org/"><meta property="og:title" content="SamiraAbedini"><meta property="og:description" content="SamiraAbedini"><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://developerfolio.js.org/"><meta property="twitter:title" content="SamiraAbedini"><meta property="twitter:description" content="SamiraAbedini"><meta name="msapplication-TileColor" content="#603cba"><meta name="theme-color" content="#6c63ff"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v8=qAJ44G5Bm7"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v8=qAJ44G5Bm7"><link rel="mask-icon" href="/safari-pinned-tab.svg?v8=qAJ44G5Bm7" color="#885bd5"><link rel="shortcut icon" href="/favicon.ico?v8=qAJ44G5Bm7"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v8=qAJ44G5Bm7"><link rel="manifest" href="/manifest.json"/><link rel="preload" href="/static/media/Montserrat-Regular.ee653992.ttf" as="font" type="font/woff" crossorigin><link rel="preload" href="/static/media/Agustina.21f233e1.woff" as="font" type="font/woff" crossorigin><script async src="https://www.googletagmanager.com/gtag/js?id=UA-135618960-2"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-135618960-2")</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.4/css/all.min.css"><script defer="defer" src="/static/js/main.9ee9f7ca.js"></script><link href="/static/css/main.6f2fe60d.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Samira Abedini</title>
+  <meta name="description" content="Samira Abedini — research assistant at CISPA working on the security and safety of LLM agents and multi-agent systems." />
+  <meta property="og:title" content="Samira Abedini" />
+  <meta property="og:description" content="Security and safety of LLM agents and multi-agent systems. Research assistant at CISPA, MSc Computer Science at Saarland University." />
+  <meta property="og:image" content="https://samiraabedini.github.io/assets/samira.jpg" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=bee" />
+  <link rel="icon" href="favicon.ico?v=bee" sizes="any" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=bee" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@800&display=swap" rel="stylesheet" />
+  <script>
+    try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+  <link rel="stylesheet" href="assets/site.css" />
+  <style>
+    .hero-wrap { overflow-x: hidden; overflow-x: clip; overflow-y: visible; }
+
+    .top-grid {
+      max-width: 1120px; margin: 0 auto; padding: 48px 20px 0;
+      display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 56px; align-items: start;
+    }
+    .hero { container-type: inline-size; }
+    .role { color: var(--dim); margin: 10px 0 22px; font-size: min(3.1cqi, 17px); }
+    .role span { display: block; white-space: nowrap; }
+    .photo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; display: block; margin-bottom: 28px; }
+    .links { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 22px; font-weight: 500; font-size: 15px; }
+
+    .nowrap { white-space: nowrap; position: relative; }
+    .bee {
+      display: inline-block; width: 1.05em; margin-left: 0.15em; vertical-align: -0.14em;
+      position: relative; z-index: 2;
+      animation: bee-arrive 3s ease-out 0.6s both;
+    }
+    .bee img { display: block; width: 100%; height: auto; animation: bee-bob 1.4s ease-in-out infinite; }
+    .bee.away img { visibility: hidden; }
+    @keyframes bee-bob { 50% { transform: translateY(-4px) rotate(-3deg); } }
+    @keyframes bee-arrive {
+      0%   { transform: translate(260px, -220px) scaleX(-1) rotate(8deg); opacity: 0; visibility: hidden; }
+      12%  { opacity: 1; visibility: visible; }
+      65%  { transform: translate(40px, -34px) scaleX(-1) rotate(-6deg); }
+      85%  { transform: translate(0, 0) scaleX(-1) rotate(0deg); }
+      100% { transform: translate(0, 0) scaleX(1) rotate(0deg); opacity: 1; visibility: visible; }
+    }
+    :root[data-theme="dark"] .bee img, :root[data-theme="dark"] .cursor-bee { filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5)); }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .bee img, :root:not([data-theme="light"]) .cursor-bee { filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5)); }
+    }
+    .cursor-bee {
+      position: fixed; left: 0; top: 0; width: 34px; height: auto; z-index: 1000;
+      pointer-events: none; opacity: 0; transition: opacity 0.2s; will-change: transform;
+    }
+    .cursor-bee.on { opacity: 1; }
+    .cursor-say {
+      position: fixed; left: 0; top: 0; z-index: 1001; pointer-events: none;
+      font: 600 14px/1.3 Gelasio, Georgia, serif; white-space: nowrap;
+      color: var(--bg); background: var(--head); padding: 6px 12px; border-radius: 14px;
+      opacity: 0; transition: opacity 0.2s;
+    }
+    .cursor-say::after { content: ""; position: absolute; left: 50%; top: 100%; margin-left: -7px; border: 7px solid transparent; border-top-color: var(--head); border-bottom: 0; }
+    .cursor-say.show { opacity: 1; }
+    .bee-toggle {
+      position: fixed; right: 16px; bottom: 16px; z-index: 1001;
+      display: inline-flex; align-items: center; gap: 6px;
+      font: 500 14px/1 Gelasio, Georgia, serif; color: var(--dim);
+      background: var(--bg); border: 1px solid var(--rule); border-radius: 999px;
+      padding: 6px 12px 6px 8px; cursor: pointer;
+    }
+    .bee-toggle:hover { color: var(--text); border-color: var(--faint); }
+    .bee-toggle img { width: 18px; height: auto; }
+    .bee-toggle[aria-pressed="false"] img { filter: grayscale(1); opacity: 0.6; }
+    @media (prefers-reduced-motion: reduce) {
+      .bee, .bee img { animation: none; }
+    }
+
+    .hero h1 { font-size: clamp(30px, 4.3vw, 54px); white-space: nowrap; }
+
+    .play { padding: 18px 20px 4px; border: 1px solid var(--rule); border-radius: 14px; }
+    .play-label { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--faint); }
+    #sim { display: block; width: 100%; height: auto; margin-top: 4px; touch-action: manipulation; user-select: none; -webkit-user-select: none; }
+    #sim .edge { stroke: var(--dim); stroke-width: 1.2; }
+    #sim .node { cursor: pointer; }
+    #sim .node .hit { fill: transparent; }
+    #sim .node .ring { fill: none; stroke: var(--bad); stroke-width: 2; opacity: 0; }
+    #sim .node.stubborn .ring { opacity: 1; }
+    #sim .node:focus { outline: none; }
+    #sim .node:focus-visible .hit { stroke: var(--link); stroke-width: 2; }
+    .sim-bar { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+    .status { font-weight: 500; min-height: 1.65em; }
+    .controls { display: flex; gap: 20px; }
+    .controls button {
+      font: inherit; font-size: 15px; color: var(--text); background: none; border: 0; padding: 0; cursor: pointer;
+      border-bottom: 1px solid var(--faint);
+    }
+    .controls button:hover { border-color: var(--text); }
+    .controls button[aria-pressed="true"] { color: var(--ok); border-color: var(--ok); }
+    .caption { color: var(--dim); font-size: 15px; max-width: 62ch; margin-top: 14px; }
+
+    .item { margin-bottom: 22px; }
+    .item-title { display: block; font-weight: 600; }
+    .paper-link { font-weight: 500; font-size: 0.9em; white-space: nowrap; }
+    .meta { color: var(--dim); font-size: 15px; }
+    .meta b { color: var(--text); font-weight: 600; }
+    .venue { color: var(--accent); font-size: 14px; font-weight: 500; }
+    .item .links { margin-top: 4px; font-size: 14px; gap: 4px 14px; }
+    .item p { color: var(--dim); font-size: 15px; margin: 4px 0 0; }
+
+    .rows { list-style: none; padding: 0; margin: 0; }
+    .rows li { display: grid; grid-template-columns: 110px 1fr; gap: 16px; padding: 7px 0; }
+    .rows .when { color: var(--faint); font-size: 14px; font-variant-numeric: tabular-nums; padding-top: 1px; }
+    .rows .sub { color: var(--dim); font-size: 15px; }
+
+    .plain { padding-left: 18px; margin: 0; }
+    .plain li { margin-bottom: 7px; }
+    .note { color: var(--faint); font-size: 14px; }
+
+    @media (max-width: 900px) {
+      .top-grid { grid-template-columns: minmax(0, 1fr); gap: 44px; }
+      .hero h1 { font-size: clamp(30px, 9vw, 54px); }
+    }
+    @media (max-width: 600px) {
+      .top-grid { padding-top: 28px; }
+      .play { padding: 14px 14px 2px; }
+      .photo { width: 120px; height: 120px; margin-bottom: 22px; }
+      .rows li { grid-template-columns: 1fr; gap: 0; }
+    }
+  </style>
+</head>
+<body>
+<div class="top">
+  <nav>
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#teaching">Teaching &amp; service</a>
+    <a href="#talks">Talks &amp; press</a>
+    <a href="#cv">CV</a>
+    <a href="mailto:samira.abedini@cispa.de">Contact</a>
+  </nav>
+  <button class="theme-btn" type="button" aria-label="Switch theme"></button>
+</div>
+
+<div class="hero-wrap">
+<div class="top-grid">
+<header class="hero intro" id="about">
+  <img class="photo" src="assets/samira.jpg" alt="Samira Abedini" width="200" height="200" />
+  <div>
+    <h1>Samira <span class="nowrap">Abedini<span class="bee" aria-hidden="true"><img src="assets/bee.png" alt="" width="111" height="124" /></span></span></h1>
+    <div class="role"><span>Research Assistant, CISPA Helmholtz Center for Information Security</span><span>MSc Computer Science student, Saarland University</span></div>
+    <p>I am a Master's student in Computer Science at Saarland University and a research assistant in the Dormant Neurons group at CISPA. My research focuses on the safety and security of LLM agents. I'm particularly interested in how agents influence each other and how understanding these interactions and their cascading effects can help us build safer and more robust multi-agent systems. Recently, I've also been exploring self-improving multi-agent systems and their safety implications : )</p>
+    <div class="icon-links">
+      <a href="mailto:samira.abedini@cispa.de" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg></a>
+      <a href="https://scholar.google.com/citations?user=r9zUsXIAAAAJ&amp;hl=en" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a>
+      <a href="https://github.com/SamiraAbedini" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+      <a href="https://www.linkedin.com/in/samiraabedini-ai/" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://x.com/samira_abedini" aria-label="X" title="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<section class="play" aria-label="Interactive demo">
+  <div class="play-label">Try it</div>
+  <svg id="sim" viewBox="0 0 900 460" role="img" aria-label="A network of agents. Click an agent to make it stubborn."></svg>
+  <div class="sim-bar">
+    <div class="status" id="status" aria-live="polite">All agents agree. Click on each to make it stubborn.</div>
+    <div class="controls">
+      <button type="button" id="defense" aria-pressed="false">Defense: off</button>
+      <button type="button" id="reset">Reset</button>
+    </div>
+  </div>
+  <p class="caption">These agents listen to each other. <span style="color: var(--ok)">Purple</span>: right answer, <span style="color: var(--bad)">orange</span>: wrong one. Make one agent stubborn, and it gradually misleads the others, creating an influence cascade. Turn on the defense, and the agents learn not to trust the stubborn one. But how can we model these influence cascades and make multi-agent systems more robust against them? That's the kind of problem I'm working on :)</p>
+</section>
+</div>
+</div>
+
+<main>
+
+  <section id="research">
+    <h2>Publications</h2>
+
+    <div class="item">
+      <div class="item-title">No More, No Less: Task Alignment in Terminal Agents <a class="paper-link" href="https://arxiv.org/pdf/2605.12233">[arXiv]</a></div>
+      <div class="meta">Sina Mavali, David Pape, Jonathan Evertz, <b>Samira Abedini</b>, Devansh Srivastav, Thorsten Eisenhofer, Sahar Abdelnabi, Lea Schönherr</div>
+      <div class="venue">NeurIPS 2026, Datasets &amp; Benchmarks Track</div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">Don't Trust Stubborn Neighbors: A Security Framework for Agentic Networks <a class="paper-link" href="https://arxiv.org/pdf/2603.15809">[arXiv]</a></div>
+      <div class="meta"><b>Samira Abedini</b>*, Sina Mavali*, Lea Schönherr, Martin Pawelczyk†, Rebekka Burkholz†</div>
+      <div class="venue">CompLearn Workshop on Safety, Interpretability, and Agents @ ICML 2026</div>
+      <div class="links">
+        <a href="https://cispa.de/en/ai-agents">Talk</a>
+        <a href="https://cispa.de/en/tldr-news-50">Podcast</a>
+        <a href="https://www.forschung-und-lehre.de/forschung/wie-man-manipulative-ki-agenten-eindaemmt-7939">Press (DE)</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">Contextual Candour: Role-Aware Graduated Disclosure for LLMs over Mixed-Sensitivity Contexts <a class="paper-link" href="https://arxiv.org/pdf/2610.28067">[arXiv]</a></div>
+      <div class="meta">Devansh Srivastav, David Pape, <b>Samira Abedini</b>, Lea Schönherr</div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">How Persistent Memory Architectures Shape Contextual Integrity in LLM-Based Assistants</div>
+      <div class="meta">David Beste, Devansh Srivastav, <b>Samira Abedini</b>, Sergej Dechand, Srishti Gupta, Lea Schönherr</div>
+    </div>
+
+    <p class="note">*, † equal contributions</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="item">
+      <div class="item-title">AgentChair: a conference run entirely by AI agents</div>
+      <p>An interactive challenge built for the BIFOLD Berlin Summer School on AI and Society. Participants attack the reviewer agents to flip paper decisions, then work out how to defend against those attacks.</p>
+      <div class="links"><a href="https://www.agentc.hair/">Try it</a><span class="meta">2026</span></div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">MAS-Challenge: prompt injection against a multi-agent system</div>
+      <p>A CTF-style challenge run at summer schools in Vienna and Cagliari. Over 2,000 attack attempts were made, and only one participant cleared the hardest level.</p>
+      <div class="links">
+        <a href="https://ctf-dormant-neurons-mas1.streamlit.app/">Try it</a>
+        <a href="https://github.com/SamiraAbedini/MAS-CHALLENGE1">Code</a>
+        <span class="meta">2025</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">Fine-tuning MolFormer Chemical Language Model</div>
+      <p>Fine-tuned the model to predict molecular lipophilicity. Used influence functions (LiSSA) and uncertainty-based selection to choose the training data, and compared BitFit, LoRA and IA³ fine-tuning. Built for the NNTI course project.</p>
+      <div class="links"><a href="https://github.com/SamiraAbedini/NNTI-Project">Code</a><span class="meta">2024–2025</span></div>
+    </div>
+  </section>
+
+  <section id="teaching">
+    <h2>Teaching &amp; service</h2>
+    <ul class="plain">
+      <li>Teaching assistant: Trustworthy Agentic Systems seminar (Saarland University) 2026</li>
+      <li>Teaching assistant: Trustworthy Machine Learning (University of Hamburg) 2026</li>
+      <li>Teaching assistant: Research Problems in ML and Security seminar (Saarland University) 2026</li>
+      <li>Tutor: Elements of Machine Learning (Saarland University) 2026</li>
+      <li>Organizing team, SaTML, Munich 2026</li>
+      <li>Reviewer, CompLearn Workshop @ ICML 2026</li>
+      <li>Summer school: CISPA-ELLIS Summer School on Trustworthy AI (2025)</li>
+      <li>Summer school: BIFOLD Berlin Summer School on AI and Society (2026)</li>
+    </ul>
+  </section>
+
+  <section id="talks">
+    <h2>Talks &amp; press</h2>
+    <ul class="plain">
+      <li><a href="https://cispa.de/en/ai-agents">When stubbornness becomes a security problem: how AI agents can manipulate others</a> <span class="meta">· CISPA research talk</span></li>
+      <li><a href="https://cispa.de/en/tldr-news-50">Multi-agent AI systems</a> <span class="meta">· CISPA podcast</span></li>
+      <li><a href="https://www.forschung-und-lehre.de/forschung/wie-man-manipulative-ki-agenten-eindaemmt-7939">Wie man manipulative KI-Agenten eindämmt</a> <span class="meta">· Forschung &amp; Lehre</span></li>
+    </ul>
+  </section>
+
+  <section id="cv">
+    <h2>CV</h2>
+
+    <h3>Education</h3>
+    <ul class="rows">
+      <li><span class="when">2024 – now</span><span>MSc Computer Science, Saarland University<br /><span class="sub">Started in Bioinformatics and switched to Computer Science in April 2026. Courses include Trustworthy Machine Learning, Neural Networks: Theory and Implementation, Elements of Machine Learning.</span></span></li>
+      <li><span class="when">2017 – 2021</span><span>BSc Bioelectric Engineering, University of Tabriz<br /><span class="sub">Thesis: a digital feedforward dynamic range compressor for hearing aids.</span></span></li>
+    </ul>
+
+    <h3>Research experience</h3>
+    <ul class="rows">
+      <li><span class="when">2025 – now</span><span>Research Assistant, CISPA Helmholtz Center for Information Security<br /><span class="sub">Dormant Neurons group, supervised by Dr. Lea Schönherr</span></span></li>
+      <li><span class="when">2024</span><span>Research Assistant, Department of Cognitive Neuroscience, University of Tabriz<br /><span class="sub">ML-based prediction of early Alzheimer's biomarkers from EEG, supervised by Dr. Soomaayeh Heysieattalab</span></span></li>
+    </ul>
+
+    <h3>Other experience</h3>
+    <ul class="rows">
+      <li><span class="when">2020 – 2022</span><span>Biomedical Engineer, BMGs, Tabriz<br /><span class="sub">Piezoelectric energy harvesting for leadless pacemakers; an air purification device during COVID-19</span></span></li>
+      <li><span class="when">2020 – 2023</span><span>Mathematics Teacher, Hallaj Mathematics Academy, Tabriz<br /><span class="sub">University entrance exam preparation for high school students</span></span></li>
+    </ul>
+
+    <h3>Languages</h3>
+    <p>Turkish, Persian, Azerbaijani (native), English (C1), German (A2)</p>
+  </section>
+
+</main>
+
+<img class="cursor-bee" src="assets/bee.png" alt="" aria-hidden="true" width="111" height="124" />
+<div class="cursor-say" aria-live="polite"></div>
+<button class="bee-toggle" type="button" aria-pressed="true"><img src="assets/bee.png" alt="" width="111" height="124" /><span>Bee gone</span></button>
+
+<script src="assets/theme.js"></script>
+<script>
+(function () {
+  const home = document.querySelector('.bee');
+  const cb = document.querySelector('.cursor-bee');
+  const bubble = document.querySelector('.cursor-say');
+  const toggle = document.querySelector('.bee-toggle');
+  const toggleText = toggle.querySelector('span');
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const canFollow = !reduceMotion && matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  if (!canFollow) { cb.remove(); bubble.remove(); toggle.remove(); return; }
+
+  const W = 34, H = 38;
+  const GLIDE_MS = 1800;
+  let mode = 'home';
+  let glideFrom = null, glideStart = 0;
+  let tx = 0, ty = 0, x = 0, y = 0, s = 1, lastX = null, lastY = 0, seen = false;
+  let vx = 0, vy = 0, face = 1, running = false, bubbleOnBee = false, bubbleTimer;
+  let enabled = true;
+  mode = 'follow';
+  home.classList.add('away');
+
+  function setEnabled(on) {
+    enabled = on;
+    toggle.setAttribute('aria-pressed', on);
+    toggleText.textContent = on ? 'Bee gone' : 'Bee back';
+  }
+  setEnabled(enabled);
+
+  function homeSpot() {
+    const r = home.getBoundingClientRect();
+    return { x: r.left + r.width / 2, y: r.top + r.height / 2, s: r.width / W };
+  }
+
+  function say(text) {
+    clearTimeout(bubbleTimer);
+    bubble.textContent = text;
+    bubbleOnBee = true;
+    placeBubble();
+    bubble.classList.add('show');
+    bubbleTimer = setTimeout(() => { bubble.classList.remove('show'); bubbleOnBee = false; }, 2400);
+  }
+  function placeBubble() {
+    bubble.style.transform = 'translate(' + x + 'px,' + (y - H * s / 2 - 10) + 'px) translate(-50%, -100%)';
+  }
+  function start() {
+    if (!running) { running = true; requestAnimationFrame(tick); }
+  }
+
+  function maybeLeaveHome() {
+    if (mode !== 'home' || !enabled || !seen) return false;
+    const h = homeSpot();
+    x = h.x; y = h.y; s = h.s; face = 1;
+    glideFrom = h; glideStart = performance.now();
+    mode = 'joining';
+    home.classList.add('away');
+    cb.classList.add('on');
+    start();
+    return true;
+  }
+  function arriveHome() {
+    mode = 'home';
+    cb.style.transition = 'none';
+    cb.classList.remove('on');
+    void cb.offsetWidth;
+    cb.style.transition = '';
+    home.classList.remove('away');
+  }
+
+  addEventListener('mousemove', e => {
+    tx = e.clientX + 16 + W / 2;
+    ty = e.clientY + 12 + H / 2;
+    if (lastX !== null) { vx = 0.6 * vx + 0.4 * (e.clientX - lastX); vy = 0.6 * vy + 0.4 * (e.clientY - lastY); }
+    lastX = e.clientX; lastY = e.clientY; seen = true;
+    if (mode === 'home') { maybeLeaveHome(); return; }
+    if ((mode === 'follow' || mode === 'joining') && !cb.classList.contains('on')) { mode = 'follow'; x = tx; y = ty; s = 1; cb.classList.add('on'); start(); }
+  });
+  document.documentElement.addEventListener('mouseleave', () => {
+    lastX = null;
+    if (mode === 'follow' || mode === 'joining') cb.classList.remove('on');
+  });
+
+  toggle.addEventListener('click', () => {
+    if (enabled) {
+      setEnabled(false);
+      if (mode === 'follow' || mode === 'joining') {
+        say('Bzz...');
+        mode = 'returning';
+        glideFrom = { x, y, s }; glideStart = performance.now();
+        if (cb.classList.contains('on')) start(); else arriveHome();
+      }
+    } else {
+      setEnabled(true);
+      if (mode === 'returning') {
+        mode = 'joining';
+        glideFrom = { x, y, s }; glideStart = performance.now();
+        say('Long time no bee!');
+      }
+      else if (maybeLeaveHome()) say('Long time no bee!');
+    }
+  });
+
+  function tick(now) {
+    let gx = tx, gy = ty, gs = 1, t = 0;
+    if (mode === 'returning') { const h = homeSpot(); gx = h.x; gy = h.y; gs = h.s; }
+    const px = x, py = y;
+    if (mode === 'joining' || mode === 'returning') {
+      t = Math.min(1, (now - glideStart) / GLIDE_MS);
+      const e = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+      x = glideFrom.x + (gx - glideFrom.x) * e;
+      y = glideFrom.y + (gy - glideFrom.y) * e;
+      s = glideFrom.s + (gs - glideFrom.s) * e;
+      vx = x - px; vy = y - py;
+      if (t >= 1 && mode === 'returning') { arriveHome(); running = false; return; }
+      if (t >= 1) mode = 'follow';
+    } else {
+      x += (gx - x) * 0.12; y += (gy - y) * 0.12; s += (gs - s) * 0.12;
+    }
+    if (vx > 0.6) face = 1; else if (vx < -0.6) face = -1;
+    if (mode === 'returning' && t > 0.85) face = 1;
+    const tilt = Math.max(-20, Math.min(20, vy * 2.5));
+    if (mode === 'follow') { vx *= 0.85; vy *= 0.85; }
+    const bob = mode === 'returning' ? 0 : Math.sin(now / 180) * 2;
+    cb.style.transform = 'translate(' + (x - W / 2) + 'px,' + (y - H / 2 + bob) + 'px) scale(' + (s * face) + ',' + s + ') rotate(' + (tilt * face) + 'deg)';
+    if (bubbleOnBee) placeBubble();
+    if (cb.classList.contains('on')) requestAnimationFrame(tick); else running = false;
+  }
+})();
+
+(function () {
+  const svg = document.getElementById('sim');
+  const width = svg.getBoundingClientRect().width;
+  const size = width >= 600 ? 'wide' : width >= 440 ? 'column' : 'phone';
+  const W = { wide: 900, column: 560, phone: 520 }[size];
+  const H = { wide: 460, column: 500, phone: 600 }[size];
+  const N = { wide: 18, column: 16, phone: 14 }[size], K = 3;
+  const MIN_GAP = size === 'wide' ? 120 : 110;
+  svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+  const ALPHA = 0.06;
+  const ANCHOR = 0.12;
+  const ETA = 0.06;
+  const TAU = 0.2;
+  const STEPS_PER_SEC = 30;
+  const NS = 'http://www.w3.org/2000/svg';
+
+  const statusEl = document.getElementById('status');
+  const defenseBtn = document.getElementById('defense');
+  const resetBtn = document.getElementById('reset');
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  let seed = 11;
+  function rand() {
+    seed = (seed + 0x6D2B79F5) | 0;
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  }
+
+  const pts = [];
+  for (let tries = 0; pts.length < N && tries < 5000; tries++) {
+    const p = { x: 50 + rand() * (W - 100), y: 40 + rand() * (H - 80) };
+    if (pts.every(q => Math.hypot(p.x - q.x, p.y - q.y) > MIN_GAP)) pts.push(p);
+  }
+  const n = pts.length;
+  const dist = (a, b) => Math.hypot(pts[a].x - pts[b].x, pts[a].y - pts[b].y);
+
+  const edgeSet = new Set();
+  const addEdge = (a, b) => edgeSet.add(a < b ? a + '-' + b : b + '-' + a);
+  for (let i = 0; i < n; i++) {
+    [...Array(n).keys()].filter(j => j !== i)
+      .sort((a, b) => dist(i, a) - dist(i, b)).slice(0, K)
+      .forEach(j => addEdge(i, j));
+  }
+  const parent = [...Array(n).keys()];
+  const find = i => (parent[i] === i ? i : (parent[i] = find(parent[i])));
+  edgeSet.forEach(k => { const [a, b] = k.split('-').map(Number); parent[find(a)] = find(b); });
+  for (;;) {
+    let best = null;
+    for (let a = 0; a < n; a++) for (let b = 0; b < n; b++) {
+      if (find(a) !== find(b) && (!best || dist(a, b) < best.d)) best = { a, b, d: dist(a, b) };
+    }
+    if (!best) break;
+    addEdge(best.a, best.b);
+    parent[find(best.a)] = find(best.b);
+  }
+  const edges = [...edgeSet].map(k => {
+    const [a, b] = k.split('-').map(Number);
+    return { a, b, tab: 1, tba: 1 };
+  });
+  const nbrs = pts.map(() => []);
+  edges.forEach(e => { nbrs[e.a].push({ j: e.b, e, key: 'tab' }); nbrs[e.b].push({ j: e.a, e, key: 'tba' }); });
+
+  const prior = pts.map(() => 0.03 + rand() * 0.08);
+  let x = prior.slice();
+  let stubborn = pts.map(() => false);
+  let defense = false;
+  let touched = false;
+
+  function rgb(v) {
+    const h = getComputedStyle(document.documentElement).getPropertyValue(v).trim().replace('#', '');
+    return [0, 2, 4].map(i => parseInt(h.slice(i, i + 2), 16));
+  }
+  let ok = rgb('--ok'), bad = rgb('--bad');
+  const recolour = () => { ok = rgb('--ok'); bad = rgb('--bad'); };
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', recolour);
+  document.addEventListener('themechange', recolour);
+  const mix = t => 'rgb(' + ok.map((c, i) => Math.round(c + (bad[i] - c) * t)).join(',') + ')';
+
+  const el = (tag, attrs, parentEl) => {
+    const node = document.createElementNS(NS, tag);
+    for (const k in attrs) node.setAttribute(k, attrs[k]);
+    (parentEl || svg).appendChild(node);
+    return node;
+  };
+  const gEdges = el('g', {}), gMsgs = el('g', {}), gNodes = el('g', {});
+  edges.forEach(e => {
+    e.line = el('line', { class: 'edge', x1: pts[e.a].x, y1: pts[e.a].y, x2: pts[e.b].x, y2: pts[e.b].y }, gEdges);
+  });
+  const nodeEls = pts.map((p, i) => {
+    const g = el('g', { class: 'node', tabindex: 0, role: 'button', 'aria-label': 'Agent ' + (i + 1) }, gNodes);
+    el('circle', { class: 'hit', cx: p.x, cy: p.y, r: 24 }, g);
+    el('circle', { class: 'ring', cx: p.x, cy: p.y, r: 17 }, g);
+    const dot = el('circle', { cx: p.x, cy: p.y, r: 10 }, g);
+    const toggle = () => { touched = true; setStubborn(i, !stubborn[i]); };
+    g.addEventListener('click', toggle);
+    g.addEventListener('keydown', ev => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); toggle(); } });
+    return { g, dot };
+  });
+
+  function setStubborn(i, on) {
+    stubborn[i] = on;
+    if (on) x[i] = 1;
+    nodeEls[i].g.classList.toggle('stubborn', on);
+    nodeEls[i].g.setAttribute('aria-pressed', on);
+  }
+
+  function step() {
+    const next = x.slice();
+    for (let i = 0; i < n; i++) {
+      if (stubborn[i]) continue;
+      let s = 0, w = 0;
+      for (const { j, e, key } of nbrs[i]) { s += e[key] * x[j]; w += e[key]; }
+      let target = w > 1e-6 ? s / w : x[i];
+      if (defense) target = (1 - ANCHOR) * target + ANCHOR * prior[i];
+      next[i] = x[i] + ALPHA * (target - x[i]);
+    }
+    if (defense) {
+      for (let i = 0; i < n; i++) {
+        for (const { j, e, key } of nbrs[i]) {
+          e[key] = Math.min(1, Math.max(0, e[key] + ETA * (TAU - Math.abs(x[j] - x[i]))));
+        }
+      }
+    }
+    x = next;
+  }
+
+  const msgs = [];
+  function spawnMsg() {
+    const e = edges[Math.floor(Math.random() * edges.length)];
+    const fwd = Math.random() < 0.5;
+    const from = fwd ? e.a : e.b, to = fwd ? e.b : e.a;
+    const trust = fwd ? e.tba : e.tab;
+    if (trust < 0.25) return;
+    const dot = el('circle', { r: 3, fill: mix(x[from]) }, gMsgs);
+    msgs.push({ from, to, t: 0, dot });
+  }
+
+  function render() {
+    edges.forEach(e => {
+      const t = Math.min(e.tab, e.tba);
+      e.line.style.opacity = 0.12 + 0.33 * t;
+      e.line.style.strokeDasharray = t < 0.25 ? '3 5' : '';
+    });
+    nodeEls.forEach((ne, i) => ne.dot.setAttribute('fill', mix(x[i])));
+    statusEl.textContent = touched ? '' : 'All agents agree. Click on each to make it stubborn.';
+  }
+
+  let last = performance.now(), acc = 0, msgClock = 0;
+  function frame(now) {
+    const dt = Math.min(0.1, (now - last) / 1000);
+    last = now;
+    acc += dt * STEPS_PER_SEC;
+    while (acc >= 1) { step(); acc -= 1; }
+    if (!reduceMotion) {
+      msgClock += dt;
+      while (msgClock > 0.07) { spawnMsg(); msgClock -= 0.07; }
+      for (let k = msgs.length - 1; k >= 0; k--) {
+        const m = msgs[k];
+        m.t += dt / 0.9;
+        if (m.t >= 1) { m.dot.remove(); msgs.splice(k, 1); continue; }
+        m.dot.setAttribute('cx', pts[m.from].x + (pts[m.to].x - pts[m.from].x) * m.t);
+        m.dot.setAttribute('cy', pts[m.from].y + (pts[m.to].y - pts[m.from].y) * m.t);
+      }
+    }
+    render();
+    requestAnimationFrame(frame);
+  }
+
+  defenseBtn.addEventListener('click', () => {
+    defense = !defense;
+    defenseBtn.setAttribute('aria-pressed', defense);
+    defenseBtn.textContent = 'Defense: ' + (defense ? 'on' : 'off');
+    if (!defense) edges.forEach(e => { e.tab = 1; e.tba = 1; });
+  });
+  resetBtn.addEventListener('click', () => {
+    touched = false;
+    x = prior.slice();
+    pts.forEach((_, i) => setStubborn(i, false));
+    edges.forEach(e => { e.tab = 1; e.tba = 1; });
+  });
+
+  render();
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
